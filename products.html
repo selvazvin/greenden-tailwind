@@ -13,7 +13,7 @@
     <!-- responsive navbar -->
     <nav class="bg-green-100 p-3 flex items-center justify-between shadow-xl sticky top-0 z-10">
         <h1 class="text-2xl md:text-3xl">Greenden</h1>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+        <svg id="menuicon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
             class="w-6 h-6 ml-auto md:hidden">
             <path fill-rule="evenodd"
                 d="M2 4.75A.75.75 0 0 1 2.75 4h14.5a.75.75 0 0 1 0 1.5H2.75A.75.75 0 0 1 2 4.75ZM2 10a.75.75 0 0 1 .75-.75h14.5a.75.75 0 0 1 0 1.5H2.75A.75.75 0 0 1 2 10Zm0 5.25a.75.75 0 0 1 .75-.75h14.5a.75.75 0 0 1 0 1.5H2.75a.75.75 0 0 1-.75-.75Z"
@@ -36,49 +36,69 @@
         </div>
     </nav>
 
+     <!-- Side navbar -->
+      
+     <section id="sidenav" class="bg-green-100 fixed z-20 top-0 transition-all duration-1000" style="width: 50%; height: 100vh; right: -50%;">
+        <div class="text-right p-5">
+            <p id="close-nav" class="inline cursor-pointer">X</p>
+        </div>
+        <ul class="flex flex-col gap-10 items-center text-gray-600 ">
+            <li>
+                <a class="hover:underline hover:text-black" href="index.html">Home</a>
+            </li>
+            <li>
+                <a class="hover:underline hover:text-black" href="products.html">Products</a>
+            </li>
+            <li>
+                <a class="hover:underline hover:text-black" href="contact.html">Contact</a>
+            </li>
+        </ul>
+    </section>
+
+
     <!-- products container -->
      <section class="p-4 text-center">
         <h1 class="font-bold text-3xl">Our Products</h1>
-        <input type="text" placeholder="Search for a Product" style="width:80%" class="border border-black p-2 rounded mt-2">
-        <div class="grid grid-cols-2 justify-center md:grid-cols-4 mt-5 gap-5">
-            <div class="grid justify-center">
-                <img src="./Image/bestseller_1.jpg" alt="" class="rounded hover:shadow-xl transform hover:-translate-y-2">
-                <p>Rose plant</p>
+        <input id="search" type="text" placeholder="Search for a Product" style="width:80%" class="border border-black p-2 rounded mt-2">
+        <div id="product-container" class="grid grid-cols-2 justify-center md:grid-cols-4 mt-5 gap-5">
+            <div class="text-center">
+                <img src="./Image/bestseller_1.jpg" alt="" class="inline rounded hover:shadow-xl transform hover:-translate-y-2">
+                <h1>Rose plant</h1>
                 <p>@20</p>
             </div>
-            <div class="grid justify-center">
-                <img src="./Image/bestseller_2.jpg" alt="" class="rounded hover:shadow-xl transform hover:-translate-y-2">
-                <p>Lily plant</p>
+            <div class="text-center">
+                <img src="./Image/bestseller_2.jpg" alt="" class="inline rounded hover:shadow-xl transform hover:-translate-y-2">
+                <h1>Lily plant</h1>
                 <p>@20</p>
             </div>
-            <div class="grid justify-center">
-                <img src="./Image/bestseller_3.jpg" alt="" class="rounded hover:shadow-xl transform hover:-translate-y-2">
-                <p>Hibiscus Rose</p>
+            <div class="text-center">
+                <img src="./Image/bestseller_3.jpg" alt="" class="inline rounded hover:shadow-xl transform hover:-translate-y-2">
+                <h1>Hibiscus Rose</h1>
                 <p>@20</p>
             </div>
-            <div class="grid justify-center">
-                <img src="./Image/bestseller_4.jpg" alt="" class="rounded hover:shadow-xl transform hover:-translate-y-2">
-                <p>New pet plant</p>
+            <div class="text-center">
+                <img src="./Image/bestseller_4.jpg" alt="" class="inline rounded hover:shadow-xl transform hover:-translate-y-2">
+                <h1>New pet plant</h1>
                 <p>@20</p>
             </div>
-            <div class="grid justify-center">
-                <img src="./Image/bestseller_3.jpg" alt="" class="rounded hover:shadow-xl transform hover:-translate-y-2">
-                <p>Rose plant</p>
+            <div class="text-center">
+                <img src="./Image/bestseller_3.jpg" alt="" class="inline rounded hover:shadow-xl transform hover:-translate-y-2">
+                <h1>Rose plant</h1>
                 <p>@20</p>
             </div>
-            <div class="grid justify-center">
-                <img src="./Image/bestseller_4.jpg" alt="" class="rounded hover:shadow-xl transform hover:-translate-y-2">
-                <p>Lily plant</p>
+            <div class="text-center">
+                <img src="./Image/bestseller_4.jpg" alt="" class="inline rounded hover:shadow-xl transform hover:-translate-y-2">
+                <h1>Lily plant</h1>
                 <p>@20</p>
             </div>
-            <div class="grid justify-center">
-                <img src="./Image/bestseller_1.jpg" alt="" class="rounded hover:shadow-xl transform hover:-translate-y-2">
-                <p>Hibiscus Rose</p>
+            <div class="text-center">
+                <img src="./Image/bestseller_1.jpg" alt="" class="inline rounded hover:shadow-xl transform hover:-translate-y-2">
+                <h1>Hibiscus Rose</h1>
                 <p>@20</p>
             </div>
-            <div class="grid justify-center">
-                <img src="./Image/bestseller_2.jpg" alt="" class="rounded hover:shadow-xl transform hover:-translate-y-2">
-                <p>New pet plant</p>
+            <div class="text-center">
+                <img src="./Image/bestseller_2.jpg" alt="" class="inline rounded hover:shadow-xl transform hover:-translate-y-2">
+                <h1>New pet plant</h1>
                 <p>@20</p>
             </div>
         </div>
@@ -91,6 +111,9 @@
     <p>@ 2021 Greenday.com</p>
 </section>
    
+
+<script src="products.js"></script>
+
 </body>
 
 </html>
